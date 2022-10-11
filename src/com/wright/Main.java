@@ -13,7 +13,7 @@ public class Main {
         someArray.insert(60);
 
 //        System.out.println(someArray.indexOf(50));
-        someArray.removeAt(5);
+//        someArray.removeAt(5);
 
         someArray.print();
     }
