@@ -6,6 +6,8 @@
 
 package com.wright.algoandds;
 
+import java.util.Arrays;
+
 public class Array {
 
     private int[] items;
@@ -21,28 +23,16 @@ public class Array {
         if (arrayCount == items.length) {
             // Increase array size
             var newItems = new int[arrayCount * 2];
-//            for (int i = 0; i < items.length; i++) {
-//                newItems[i] = items[i];
-//            }
-//            newItems[arrayCount++] = item;
-//            items = newItems;
-//            System.out.println(Arrays.toString(items));
+//            Copy content from old array
+            for (int i = 0; i < items.length; i++) {
+                newItems[i] = items[i];
+            }
+//            set old array to newarray
+            items = newItems;
         }
-//        else{
+        System.out.println(Arrays.toString(items));
+
         items[arrayCount++] = item;
-//        }
-//        if(items.length == arrayCount){
-//            int[] newItems = new int[arrayCount * 2];
-//
-//            for(int i = 0; i < arrayCount; i++)
-//                newItems[i] = items[i];
-//
-////            items = newItems;
-////            System.out.println(Arrays.toString(items));
-//            newItems[arrayCount++] = item;
-//        }
-//
-//        items[arrayCount++] = item;
 
     }
 
@@ -66,8 +56,8 @@ public class Array {
     }
 
     public void print(){
-        for (int item: items) {
-            System.out.println(item);
+        for (int i = 0; i < arrayCount; i++) {
+            System.out.println(items[i]);
         }
     }
 
