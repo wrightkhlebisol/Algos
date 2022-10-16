@@ -11,6 +11,6 @@ public class Main {
         list.addLast(30);
 
         list.addFirst(5);
-        System.out.println(list.indexOf(30));
+        System.out.println(list.contains(0));
     }
 }
