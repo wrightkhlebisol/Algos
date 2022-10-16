@@ -1,20 +1,14 @@
 package com.wright;
 
-import com.wright.algoandds.Array;
+
+import com.wright.algoandds.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        var someArray = new Array(3);
-        someArray.insert(10);
-        someArray.insert(20);
-        someArray.insert(30);
-        someArray.insert(40);
-        someArray.insert(50);
-        someArray.insert(60);
+        var list = new LinkedList();
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
 
-//        System.out.println(someArray.indexOf(50));
-//        someArray.removeAt(5);
-
-        someArray.print();
     }
 }
