@@ -52,6 +52,16 @@ public class LinkedList {
         return indexOf(item) != -1;
     }
 
-//    deleteFirst();
-//    deleteLast();
+    public void removeFirst(){
+        // [10 -> 20 -> 30]
+        // Get second, assign that to global first
+        // Assign first next to null
+        Node secondNode = first.next;
+        first.next = null;
+        first = secondNode;
+    }
+
+    public void removeLast(){
+
+    }
 }
