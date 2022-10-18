@@ -8,12 +8,12 @@ package com.wright.algoandds;
 
 import java.util.Arrays;
 
-public class Array {
+public class DynamicArray {
 
     private int[] items;
     private int arrayCount;
 
-    public Array(int length){
+    public DynamicArray(int length){
         items = new int[length];
     }
 
