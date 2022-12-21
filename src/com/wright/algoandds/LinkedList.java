@@ -119,12 +119,12 @@ public class LinkedList {
         //
         if(isEmpty()) return;
 
-        var node1 = first;
-        var node2 = first.next;
+        var node1 = first; // previous
+        var node2 = first.next; // current
 
         while(node2 != null){
             // break link to third, store third
-            var node3 = node2.next;
+            var node3 = node2.next; // next
             node2.next = node1;
 
             node1 = node2;
@@ -135,18 +135,23 @@ public class LinkedList {
         first = node1;
     }
 
-
-    /**
-     * //            if(currentNode == last){
-     * //                return;
-     * ////                first.next = null;
-     * //            }
-     * //            System.out.println(currentNode.value);
-     *             // Get Next node,
-     *             var nextNode = currentNode.next;
-     *             System.out.println(nextNode.value);
-     * //            nextNode.next = ;
-     *             currentNode = currentNode.next;
-     *             currentNode.next =
-     */
+    public int getKthFromTheEnd(int k){
+        if(isEmpty())
+            throw new IllegalStateException();
+        // use two nodes to measure the
+        var a = first;
+        var b = first;
+        // distance between k and end from the front
+        for(var i = 1; i < k; i++) {
+            b = b.next;
+            if (b == null)
+                throw new IllegalArgumentException();
+        }
+        // Then move them forward
+        while(b != last){
+            a = a.next;
+            b = b.next;
+        }
+        return a.value;
+    }
 }
